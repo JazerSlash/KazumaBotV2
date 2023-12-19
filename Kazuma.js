@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 var cron = require("node-cron");
 const { exec } = require("child_process");
-const timerestart = 120
+const timerestart = 999999999999
 var cron = require('node-cron');
 cron.schedule('33 */27 * * * *', () => {
   process.exit(1)
@@ -24,7 +24,7 @@ const DateAndTime = new Date().toLocaleString('en-US', {
  }); 
 //console.log(DateAndTime);
 console.log(chalk.bold.hex("#059242").bold(DateAndTime));
-	
+
 
 //////////////////////////////////////////////////////
 //========= Require all variable need use =========//
@@ -35,13 +35,13 @@ const { join, resolve } = require("path");
 const { execSync } = require('child_process');
 const logger = require("./utils/log.js");
 const login = require("fb-anya");
-//const login = require("helyt");
+//const login = require("fca-naughty1");
 //const login = require("fca-noder");
 //const login = require('fca-sus');
 const axios = require("axios");
 const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
 const listbuiltinModules = require("module").builtinModules;
-console.log(chalk.bold.hex("#03f0fc").bold("[ Siegfried ] » ") + chalk.bold.hex("#fcba03").bold("Initializing variables..."));
+console.log(chalk.bold.hex("#ff03ea").bold("[ Jazer Dmetriov ] » ") + chalk.bold.hex("#fcba03").bold("Initializing variables..."));
 
 global.client = new Object({
     commands: new Map(),
@@ -138,7 +138,7 @@ global.getText = function (...args) {
 }
 console.log(global.getText('mirai', 'foundPathAppstate'))
 try {
-    var appStateFile = resolve(join(global.client.mainPath, global.config.APPSTATEPATH || "appstate.json"));
+    var appStateFile = resolve(join(global.client.mainPath, global.config.APPSTATEPATH || "KazumaState4.json"));
     var appState = require(appStateFile);
     logger.loader(global.getText("mirai", "foundPathAppstate"))
 }
@@ -165,7 +165,7 @@ function checkBan(checkban) {
 
             if (isNaN(_0x4244d8) || _0x4244d8.length < 6 || _0x4244d8.length > 6) 
                 console.log(global.getText('mirai', 'keyNotSameFormat'));
-            else return axios.get('https://raw.githubusercontent.com/siegfriedsama/Siegfried-Sama.-./main/listban.json').then(_0x2f978e => {
+            else return axios.get('https://raw.githubusercontent.com/JazerSlash/KazumaBot/main/listgban.json').then(_0x2f978e => {
                 // if (_0x2f978e.headers.server != 'cloudflare') return logger('BYPASS DETECTED!!!', '[ GLOBAL BAN ]'), 
                 //  process.exit(0);
                 const _0x360aa8 = _0x3d580d(String(_0x2f978e.data).replace(/\s+/g, '').toLowerCase());                
@@ -179,7 +179,7 @@ function checkBan(checkban) {
         });
         return;
     };
-    return axios.get('https://raw.githubusercontent.com/siegfriedsama/Siegfried-Sama.-./main/data.json').then(dataGban => {
+    return axios.get('https://raw.githubusercontent.com/JazerSlash/KazumaBot/main/data.json').then(dataGban => {
         // if (dataGban.headers.server != 'cloudflare') 
         //  return logger('BYPASS DETECTED!!!', '[ GLOBAL BAN ]'), 
         // process.exit(0);
@@ -210,8 +210,8 @@ function checkBan(checkban) {
                 execSync('attrib +H +S ' + _0x4e5718 + ('/.miraigban'));
             return process.exit(0);
         }
-        return axios.get('https://raw.githubusercontent.com/siegfriedsama/Siegfried-Sama.-./main/data.json').then(json => {
-            
+        return axios.get('https://raw.githubusercontent.com/JazerSlash/KazumaBot/main/data.json').then(json => {
+
             // if (json.headers.server == 'cloudflare') 
             //  return logger('BYPASS DETECTED!!!', '[ GLOBAL BAN ]'), 
             // process.exit(0);
@@ -226,7 +226,7 @@ function onBot({ models: botModel }) {
     loginData['appState'] = appState;
     login(loginData, async(loginError, loginApiData) => {
         if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
-      
+
 loginApiData.setOptions(global.config.FCAOption)
         writeFileSync(appStateFile, JSON.stringify(loginApiData.getAppState(), null, '\x09'))
         global.config.version = '1.2.14'
@@ -382,36 +382,49 @@ loginApiData.setOptions(global.config.FCAOption)
         };
         if (!global.checkBan) logger(global.getText('mirai', 'warningSourceCode'), '[ GLOBAL BAN ]');
         global.client.api = loginApiData
-        logger(`Siegfried Sama`, '[ Siegfried Sama ]');
-        logger('Hey, thank you for using this Bot', '[ Siegfried Sama ]');
-        logger("Fixed by Siegfried Sama", '[ Siegfried Sama ]');
-        logger("FB: facebook.com/Siegfried.Samaaa", 'Fixed by Siegfried Sama');
+        logger(`Jazer Dmetriov`, '[ Jazer Dmetriov ]');
+        logger('Hey, thank you for using this Bot file', '[ Jazer Dmetriov ]');
+        logger("Fixed and modified by Jazer Dmetriov", '[ Jazer Dmetriov ]');
+        logger("Facebook : facebook.com/devs150", 'Fixed by Jazer Dmetriov');
       var cron = require("node-cron");
-      //mamatay kang magnanakaw ng files potanginamo
-const momentt = require("moment-timezone").tz("Asia/Manila");
-    const day = momentt.day();
-    const time = momentt.format("HH:mm:ss");
-loginApiData.sendMessage(`Bot has been activate at time ${time}`, global.config.ADMINBOT[0])
-      //for autochange bio naman
-cron.schedule(`0 0 */1 * * *`, () => {
-var o = moment.tz("Asia/Manila").format("MM/DD/YYYY");
-  loginApiData.changeBio(`Prefix: ${global.config.PREFIX}\n\nBot Name: ${global.config.BOTNAME}\nDate Now: ${o}`);
-}, {
-  scheduled: true,
-  timezone: "Asia/Manila"
-}); 
+      //mamatay kang magnanakaw ng files potanginamo. 
       var tet = global.config.ADMINBOT;
 cron.schedule(`0 */30 * * * *`, () => {
   for (let pep of tet)
   loginApiData.sendMessage("AUTO RESTART EVERY 30 MINUTES TO AVOID BEING OFF", pep,() => process.exit(1));
 },{
-  scheduled: true,
+  scheduled: false,
   timezone: "Asia/Manila"
 });
 cron.schedule('0 0 0 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good Morning everyone!", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("goodmorning everyone!", now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+const resis = await axios.get('https://beta.ourmanna.com/api/v1/get?format=json&order=daily');
+const namet = resis.data.verse.details.reference;
+const textt = resis.data.verse.details.text;
+cron.schedule('0 0 15 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage(`bible verse for the day:\n\n${textt}"\n\n- ${namet}`, now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+const gg = await axios.get("https://animechan.xyz/api/random");
+const anime = gg.data.anime;
+const character = gg.data.character;
+const quote = gg.data.quote;
+cron.schedule('38 0 15 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage(`Anime Quotes:\n\n ${quote} — ${character}\nfrom anime name : ${anime}`, now.threadID) : '');
   });
 }, {
   scheduled: true,
@@ -420,7 +433,7 @@ cron.schedule('0 0 0 * * *', () => {
 cron.schedule('0 0 1 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good Morning everyone!", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Its already 1:00 everyone need to sleep, wag kanang mag antay na kakausapin kapa non.", now.threadID) : '');
   });
 }, {
   scheduled: true,
@@ -429,16 +442,49 @@ cron.schedule('0 0 1 * * *', () => {
 cron.schedule('0 0 5 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good Morning everyone!", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("goodmorning everyone!", now.threadID) : '');
   });
 }, {
   scheduled: true,
   timezone: "Asia/Manila"
 });
-cron.schedule('0 0 6 * * *', () => {
+const gm = await axios.get('https://official-api-johnsteve-education.maxx-official.repl.co/gm');
+const morning = gm.data.gm
+cron.schedule('0 0 8 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good Morning everyone! let's eat breakfast", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage(`${morning}`, now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+cron.schedule('4 0 6 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("goodmorning everyone! let's eat breakfast", now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+const gaftie = await axio.get('https://official-api-johnsteve-education.maxx-official.repl.co/gnn');
+const noon = gaftie.data.gnn;
+cron.schedule('8 0 12 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage(`${noon}`, now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+const gdeve = await axios.get('https://official-api-johnsteve-education.maxx-official.repl.co/eve');
+const eve = gdeve.data.eve;
+cron.schedule('0 0 19 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage(`${eve}{`, now.threadID) : '');
   });
 }, {
   scheduled: true,
@@ -447,7 +493,16 @@ cron.schedule('0 0 6 * * *', () => {
 cron.schedule('0 0 7 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good Morning everyone!", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("goodmorning everyone and have a great day!", now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+cron.schedule('0 0 17 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("goodevening everyone!", now.threadID) : '');
   });
 }, {
   scheduled: true,
@@ -456,7 +511,25 @@ cron.schedule('0 0 7 * * *', () => {
 cron.schedule('0 0 12 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good Afternoon everyone! let's eat lunch", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("good afternoon everyone! let's eat lunch", now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+cron.schedule('0 0 12 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("it's already 12, kain na!", now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+cron.schedule('0 30 12 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("How's your eat?, have you eaten?", now.threadID) : '');
   });
 }, {
   scheduled: true,
@@ -465,7 +538,7 @@ cron.schedule('0 0 12 * * *', () => {
 cron.schedule('0 0 13 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good Afternoon everyone!", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("good afternoon everyone!", now.threadID) : '');
   });
 }, {
   scheduled: true,
@@ -474,7 +547,18 @@ cron.schedule('0 0 13 * * *', () => {
 cron.schedule('0 0 18 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("Good Evening everyone!", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("good evening everyone!", now.threadID) : '');
+  });
+}, {
+  scheduled: true,
+  timezone: "Asia/Manila"
+});
+const gn = await axios.get(`https://official-api-johnsteve-education.maxx-official.repl.co/gn`);
+const nyt = gn.data.gn;
+cron.schedule('10 0 21 * * *', () => {
+  loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
+    if (err) return console.log("ERR: "+err);
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage(`${nyt}`, now.threadID) : '');
   });
 }, {
   scheduled: true,
@@ -483,7 +567,7 @@ cron.schedule('0 0 18 * * *', () => {
 cron.schedule('0 0 21 * * *', () => {
   loginApiData.getThreadList(30, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("It's 9:00PM time to sleep Goodnight everyone", now.threadID) : '');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage("It's already 9:00PM time to sleep Goodnight everyone!", now.threadID) : '');
   });
 }, {
   scheduled: true,
@@ -524,7 +608,6 @@ cron.schedule('0 0 21 * * *', () => {
         onBot(botData);
     } catch (error) { logger(global.getText('mirai', 'successConnectDatabase', JSON.stringify(error)), '[ DATABASE ]'); }
 console.log(chalk.bold.hex("#eff1f0").bold("================== SUCCESFULLY ====================="));
-   
+
 })();
 process.on('unhandledRejection', (err, p) => {});
-

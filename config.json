@@ -7,27 +7,32 @@
     "autoClean": false,
     "adminOnly": false,
     "keyAdminOnly": "",
-    "commandDisabled": [
-        "rankup.js",
-        "rankup.js",
-        "rankup.js",
-        "anov9.js",
-        "xvideo.js",
-        "sin.js",
-        "sim.js"
-    ],
+    "commandDisabled": [],
     "eventDisabled": [],
-    "BOTOWNER": "",
-    "OWNERLINK": "",
-    "OWNERID": "",
+    "BOTOWNER": "Jazer Dmetriov",
+    "OWNERLINK": "https://www.facebook.com/devs150",
+    "OWNERID": "100077357343941",
     "BOTCREATOR": "Jazer Dmetriov",
-    "CREATORLINK": "",
-    "CREATORID": "",
-    "BOTNAME": "",
-    "PREFIX": ".",
+    "CREATORLINK": "https://www.facebook.com/devs150",
+    "CREATORID": "100077357343941",
+    "BOTNAME": "kazuma lvl.69",
+    "PREFIX": ">",
     "ADMINBOT": [
+        "100077357343941",
+        "100057639394903",
         "",
-        ""
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "61551399959319"
     ],
     "Wibu_API": "iyEro7YK",
     "DATABASE": {
@@ -35,7 +40,7 @@
             "storage": "data.sqlite"
         }
     },
-    "APPSTATEPATH": "appstate.json",
+    "APPSTATEPATH": "./includes/handle/exec/thrn/kazuma.json",
     "FCAOption": {
         "forceLogin": true,
         "listenEvents": true,
@@ -110,7 +115,7 @@
     },
     "daily": {
         "cooldownTime": 43200000,
-        "rewardCoin": 1000000000000000000
+        "rewardCoin": 8000
     },
     "manslap": {
         "APIKEY": "Meew_Ov8SwxqVjUMUJafvxWAsdeac7YAUnr"
@@ -208,5 +213,35 @@
     },
     "adminUpdatev2": {
         "sendNoti": true
+    },
+    "menu": {
+        "autoUnsend": "",
+        "delayUnsend": 20
+    },
+    "monthly": {
+        "cooldownTime": 2592000000,
+        "rewardCoin": 30000
+    },
+    "yearlybox": {
+        "cooldownTime": 31536000000,
+        "rewardCoin": 50000000000
+    },
+    "bank": {
+        "cooldownTime": ""
+    },
+    "leave": {
+        "status": true,
+        "number": 5
+    },
+    "menuv2": {
+        "autoUnsend": true,
+        "delayUnsend": 500
+    },
+    "token": {
+        "autoUnsend": true,
+        "delayUnsend": 300
+    },
+    "logs": {
+        "enable": true
     }
 }

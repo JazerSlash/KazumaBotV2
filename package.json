@@ -1,16 +1,16 @@
 {
-	"name": "Mysterious",
-	"version": "7.3.1",
-	"description": "A simple Facebook Messenger Bot mod by Siegfried Sama",
-	"main": "Siegfried Sama",
+	"name": "KazumaProject",
+	"version": "1.2.15",
+	"description": "A simple Facebook Messenger Bot made by Jazer Dmetriov",
+	"main": "Kazuma.js",
 	"scripts": {
-		"start": "pm2 kill && pm2 start index.js -i 1 --no-daemon",
+		"start": "node index",
 		"login": "node login",
 		"test": "node --trace-warnings --use_strict --async-stack-traces mirai"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/siegfriedsama/Siegfried-Sama/issues"
+		"url": "git+https://github.com/miraipr0ject/miraiv2.git"
 	},
 	"keywords": [
 		"bot",
@@ -22,14 +22,14 @@
 		"spermlord",
 		"miraipr0ject"
 	],
-	"author": "Siegfried Sama",
+	"author": "Jazer Dmetriov",
 	"license": "GPL-3.0",
 	"bugs": {
-		"url": "https://github.com/siegfriedsama/Siegfried-Sama/issues"
+		"url": "https://github.com/miraipr0ject/miraiv2/issues"
 	},
-	"homepage": "https://github.com/siegfriedsama/Siegfried-Sama/issues",
+	"homepage": "https://github.com/miraipr0ject/miraiv2#readme",
 	"dependencies": {
-		"@maihuybao/fca-unofficial": "^1.3.13-2",
+    "@maihuybao/fca-unofficial": "^1.3.13-2",
 		"@miraipr0ject/assets": "",
 		"@replit/database": "^2.0.1",
 		"@supercharge/strings": "^1.28.0",
@@ -102,3 +102,5 @@
 		"zalgo": "0.0.1"
 	}
 }
+
+

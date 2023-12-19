@@ -31,9 +31,9 @@ const app = express();
 
 const port = process.env.PORT || 5000
 // const port = 5000
-     
+
 app.listen(port, () =>
-	logger(`Your app is listening a http://localhost:${port}`, "[ ONLINE ]")
+  logger(`Your app is listening a http://localhost:${port}`, "[ ONLINE ]")
      );      
 
 
@@ -46,7 +46,7 @@ logger("Opened server site...", "[ Starting ]");
 function startBot(message) {
     (message) ? logger(message, "[ Starting ]") : "";
 
-    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "Siegfried.js"], {
+    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "kazuma1.js"], {
         cwd: __dirname,
         stdio: "inherit",
         shell: true
@@ -78,7 +78,7 @@ function startBot(message) {
 ////////////////////////////////////////////////
 
 
-axios.get("https://raw.githubusercontent.com/siegfriedsama/Siegfried-Sama.-./main/package.json").then((res) => {
+axios.get("https://raw.githubusercontent.com/JazerSlash/KazumaBot/main/package.json").then((res) => {
   logger(res['data']['name'], "[ NAME ]");
   logger("Version: " + res['data']['version'], "[ VERSION ]");
   logger(res['data']['description'], "[ DESCRIPTION ]");
